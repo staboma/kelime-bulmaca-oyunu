@@ -117,7 +117,7 @@ def display_grid():
     for row in range(size):
         label_row = []
         for col in range(size):
-            lbl = tk.Label(frame, text=grid[row][col], width=2, height=1, borderwidth=2, relief="solid", font=("Arial", 14), bg='blue')
+            lbl = tk.Label(frame, text=grid[row][col], width=2, height=1, borderwidth=2, relief="solid", font=("Arial", 14), bg='white')
             lbl.grid(row=row, column=col, padx=5, pady=5)
             label_row.append(lbl)
         labels.append(label_row)

@@ -135,8 +135,12 @@ def check_word():
     else:
         messagebox.showerror("Hata", f"'{word}' listede yok.")
 
-# Kelime listesi
-words = ["PYTHON", "KOD", "BULMACA", "PROGRAM", "YAZILIM", "ALGORITMA", "VERITABANI", "FONKSIYON", "NESNE", "SINIF"]
+def load_words(filename):
+    with open(filename, 'r') as file:
+        return [line.strip().upper() for line in file]
+
+# Kelime listesi dosyadan yüklenir
+words = load_words('kelimeler.txt')
 size = 15
 grid = []
 labels = []
